@@ -1,4 +1,4 @@
-import { GET_ALL_COUNTRIES, GET_COUNTRY_BY_NAME, GET_COUNTRY_DETAIL } from "./action-types";
+import { GET_ALL_COUNTRIES, GET_COUNTRY_BY_NAME, GET_COUNTRY_DETAIL, FILTER_BY_CONTINENTS, SORT_BY_POPULATION, SORT_BY_ALPHABET } from "./action-types";
 import axios from "axios";
 
 export const getAllCountries = () => {
@@ -34,7 +34,7 @@ export const getCountryByName = (name) =>{
             payload: country
         })
     }
-}
+};
 
 export const getCountryDetail = (id) => {
     return async function(dispatch){
@@ -45,5 +45,32 @@ export const getCountryDetail = (id) => {
             payload: country
         })
     }
-}
+};
+
+export const filterByContinents = (continent) => {
+    return function(dispatch){
+        dispatch({
+            type: FILTER_BY_CONTINENTS,
+            payload: continent
+        })
+    }
+};
+
+export const sortByPopulation = (order) => {
+    return function(dispatch){
+        dispatch({
+            type: SORT_BY_POPULATION,
+            payload: order
+        })
+    }
+};
+
+export const sortByAlphabet = (order) => {
+    return function(dispatch){
+        dispatch({
+            type: SORT_BY_ALPHABET,
+            payload: order
+        })
+    }
+};
 

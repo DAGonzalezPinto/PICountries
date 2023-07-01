@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import Cards from "../../components/Cards/Cards.component";
 import { getAllCountries } from "../../redux/actions/actions";
 import NavBar from "../../components/NavBar/NavBar.component";
+import Filters from "../../components/Filters/Filters";
 
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
     return (
         <div>
         <NavBar/>
+        <Filters />
         <Cards allCountries = {allSelectedCountries}/>
         </div>
     )
