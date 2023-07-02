@@ -1,4 +1,4 @@
-import { GET_ALL_COUNTRIES, GET_COUNTRY_BY_NAME, GET_COUNTRY_DETAIL, FILTER_BY_CONTINENTS, SORT_BY_POPULATION, SORT_BY_ALPHABET } from "./action-types";
+import { GET_ALL_COUNTRIES, GET_COUNTRY_BY_NAME, GET_COUNTRY_DETAIL, FILTER_BY_CONTINENTS, SORT_BY_POPULATION, SORT_BY_ALPHABET, FILTER_BY_ACTIVITIES } from "./action-types";
 import axios from "axios";
 
 export const getAllCountries = () => {
@@ -14,6 +14,7 @@ export const getAllCountries = () => {
                 subregion: country.subregion,
                 area: country.area,
                 population: country.population,
+                activities: country.Activities
 
             }
         })
@@ -56,6 +57,15 @@ export const filterByContinents = (continent) => {
     }
 };
 
+export const filterByActivities = (activity) => {
+    return function(dispatch){
+        dispatch({
+            type: FILTER_BY_ACTIVITIES,
+            payload: activity
+        })
+    }
+}
+
 export const sortByPopulation = (order) => {
     return function(dispatch){
         dispatch({
@@ -73,4 +83,7 @@ export const sortByAlphabet = (order) => {
         })
     }
 };
+
+
+
 
