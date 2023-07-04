@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getAllCountries, getCountryByName } from "../../redux/actions/actions";
+import style from "./SearchBar.module.css";
 
-const SearchBar = () => {
+const SearchBar = ({ handleFilter }) => {
     const [searchCountry, setSearchCountry] = useState("");
     const dispatch = useDispatch();
 
@@ -14,27 +15,28 @@ const SearchBar = () => {
     };
 
     const handleSearch = () => {
-        dispatch(getCountryByName(searchCountry)) 
+        dispatch(getCountryByName(searchCountry))
     };
 
     const handleOnSubmit = (event) =>{
         event.preventDefault();
         if(searchCountry.length !== 0){
             handleSearch();
+            handleFilter()
         }
     };
 
     return(
-        <div>
+        <div className={style.container}>
             <form onSubmit={handleOnSubmit}>
             <input 
+            className={style.input}
             type="text"
-            className= "input-searchbar"
-            placeholder="Buscar un pais..."
+            placeholder="Type here to search countries..."
             value={searchCountry}
             onChange={handleChange}
             />
-            <button type="submit">Submit</button>
+            <button type="submit" className={style.searchButton}>Search</button>
             </form>
         </div>
     )

@@ -1,4 +1,4 @@
-import { GET_ALL_COUNTRIES, GET_COUNTRY_BY_NAME, GET_COUNTRY_DETAIL, FILTER_BY_CONTINENTS, SORT_BY_POPULATION, SORT_BY_ALPHABET, FILTER_BY_ACTIVITIES } from "./action-types";
+import { GET_ALL_COUNTRIES, GET_COUNTRY_BY_NAME, GET_COUNTRY_DETAIL, FILTER_BY_CONTINENTS, SORT_BY_POPULATION, SORT_BY_ALPHABET, FILTER_BY_ACTIVITIES, CREATE_ACTIVITY } from "./action-types";
 import axios from "axios";
 
 export const getAllCountries = () => {
@@ -83,6 +83,17 @@ export const sortByAlphabet = (order) => {
         })
     }
 };
+
+export function createActivity(activityInfo) {
+    return async (dispatch) => {
+        await axios.post("http://localhost:3001/activities", activityInfo).then(result =>{
+            return dispatch({
+                type: CREATE_ACTIVITY,
+                payload: result
+            })
+        })
+    }
+} ;
 
 
 

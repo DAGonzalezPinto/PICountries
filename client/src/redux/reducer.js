@@ -1,4 +1,4 @@
-import { GET_ALL_COUNTRIES, GET_COUNTRY_BY_NAME, GET_COUNTRY_DETAIL, FILTER_BY_CONTINENTS, SORT_BY_ALPHABET, SORT_BY_POPULATION, FILTER_BY_ACTIVITIES } from "./actions/action-types";
+import { GET_ALL_COUNTRIES, GET_COUNTRY_BY_NAME, GET_COUNTRY_DETAIL, FILTER_BY_CONTINENTS, SORT_BY_ALPHABET, SORT_BY_POPULATION, FILTER_BY_ACTIVITIES, CREATE_ACTIVITY } from "./actions/action-types";
 
 const initialState = {
     countries: [], 
@@ -72,6 +72,10 @@ const reducer = (state = initialState, { type, payload }) =>{
             return{
                 ...state,
                 countries: sortedByAlphabet
+            }
+        case CREATE_ACTIVITY:
+            return {
+                ...state
             }
         default:
             return{
