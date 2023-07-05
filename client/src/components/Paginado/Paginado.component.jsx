@@ -26,29 +26,32 @@ const Paginado = ({ page, setPage, currentPage, setCurrentPage, maxPages }) => {
     };
   
     return (
-      <div>
+      <div className={style.paginadoContainer}>
+        <div className={style.pagButtonsContainer}>
         {currentPage === 1 ? (
           <span className={style.hideButton}></span>
         ) : (
-          <button className={style.anterior} onClick={prevPage}>
-            Patra
+          <button className={style.pagAButton} onClick={prevPage}>
+             ◁ 
           </button>
         )}
         <input
           max={maxPages}
+          className={style.pagInput}
           name="page"
           autoComplete="off"
           value={currentPage}
           onChange={(event) => handlePagination(event)}
         />
-        <button>de {maxPages}</button>
+        <button className={style.currentPag}>of {maxPages}</button>
         {currentPage === maxPages ? (
           <div className={style.hideButton}></div>
         ) : (
-          <button className={style.siguiente} onClick={nextPage}>
-            Palante
+          <button className={style.pagDButton} onClick={nextPage}>
+             ▷
           </button>
         )}
+        </div>
       </div>
     );
   };

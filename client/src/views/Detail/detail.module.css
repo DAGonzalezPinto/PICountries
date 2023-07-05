@@ -1,0 +1,118 @@
+.container {
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.781);
+}
+
+.detailContainer {
+    font-family: 'Playfair Display', serif;
+    border: 3px solid #2aa1beec;
+    box-shadow: 0 0 10px #498c91;
+    background-color: rgba(0, 0, 0, 0.89);
+    width: auto;
+    height: 850px;
+    border-radius: 20px;
+    text-align: center;
+    margin-right: 30px;
+    margin-left: 60px;
+    margin-top: 60px;
+    text-decoration: none;
+}
+
+.textStyles {
+    color: white;
+    text-shadow: 1.5px 1px #4a9788;
+    width: 400px;
+    text-decoration: none;
+}
+
+.titleContainer {
+    margin-top: 120px;
+    color: white;
+    text-shadow: 1.5px 1px #4a9788;
+}
+
+.flag {
+    right: 500px;
+    left: 200px;
+    bottom: 250px;
+    position: fixed;
+    width: 550px;
+    height: 350px;
+    box-shadow: 0 0 6px #ffffff;
+    border-radius: 30px;
+}
+
+.title {
+    position: relative;
+    top: 10px;
+    right: 500px;
+    font-size: 55px;
+}
+
+.textContainer {
+    position: relative;
+    justify-content: start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 600px;
+    left: 730px;
+    top: 110px;
+    font-size: 23px;
+}
+
+.navLink {
+    text-decoration: none;
+    color: #4a9788;
+}
+
+.homeButton {
+    border: 2px solid #2d99b4ec;
+    box-shadow: 0 0 8px #2d99b4ec;
+    border-radius: 30px;
+    background-color: #2d99b481;
+    color: white;
+    margin: 5px;
+    margin-top: 19px;
+    height: 75px;
+    width: 200px;
+    font-size: 18px;
+    font-weight: bold;
+    position: fixed;
+    top: 120px;
+    right: 120px;
+    transition: 1.5s, color .10s;
+}
+
+.homeButton:hover {
+    border: 2px solid #2d99b4ec;
+    box-shadow: 0 0 10px #2d99b4ec;
+    background-color: #08080836;
+}
+
+.loadingImg {
+    width: 200px;
+    height: 200px;
+    margin-right: 15px;
+    animation-name: rotate;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    position: relative;
+    left: 900px;
+    top: 300px;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

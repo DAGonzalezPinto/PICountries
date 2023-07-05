@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { filterByContinents, sortByPopulation, sortByAlphabet, filterByActivities } from "../../redux/actions/actions";
-
+import style from "./Filters.module.css";
 
 const Filters = ({ handleFilter }) => {
     const dispatch = useDispatch();
@@ -35,28 +35,29 @@ const Filters = ({ handleFilter }) => {
         dispatch(sortByAlphabet(order));
     };
     return(
-        <div>
-           <select className="select" onChange={(e) => handleSortByAlphabet(e.target.value)}>
-            <option>Sort by Alphabet</option>
-            <option value="ascendant">A - Z (⇑)</option>
-            <option value="descendant">Z - A (⇓)</option>
+        <div className={style.filtersContainer}>
+          <div className={style.buttonsContainer}>
+           <select className={style.selectButtons} onChange={(e) => handleSortByAlphabet(e.target.value)}>
+            <option className={style.selectOptions}>Sort by Alphabet</option>
+            <option className={style.selectOptions} value="descendant">⇑ Z - A ⇑</option>
+            <option className={style.selectOptions} value="ascendant">⇓ A - Z ⇓</option>
           </select>
-          <select className="select" onChange={(e) => handleSortByPopulation(e.target.value)}>
-            <option>Sort by Population</option>
-            <option value="ascendant">Smallest to Largest (⇑)</option>
-            <option value="descendant">Largest to Smallest (⇓)</option>
+          <select className={style.selectButtons} onChange={(e) => handleSortByPopulation(e.target.value)}>
+            <option className={style.selectOptions}>Sort by Population</option>
+            <option className={style.selectOptions} value="ascendant">⇑ Smallest to Largest ⇑</option>
+            <option className={style.selectOptions} value="descendant">⇓ Largest to Smallest ⇓</option>
       </select>
-          <select className="select" onChange={(event) => handleFilterByContinents(event.target.value)}>
-            <option value="all">All Continents</option>
-            <option value="Africa">Africa</option>
-            <option value="Asia">Asia</option>
-            <option value="Europe">Europe</option>
-            <option value="Oceania">Oceania</option>
-            <option value="Antarctica">Antarctica</option>
-            <option value="North America">North America</option>
-            <option value="South America">South America</option>
+          <select className={style.selectButtons} onChange={(event) => handleFilterByContinents(event.target.value)}>
+            <option className={style.selectOptions} value="all">All Continents</option>
+            <option className={style.selectOptions} value="Africa">Africa</option>
+            <option className={style.selectOptions} value="Asia">Asia</option>
+            <option className={style.selectOptions} value="Europe">Europe</option>
+            <option className={style.selectOptions} value="Oceania">Oceania</option>
+            <option className={style.selectOptions} value="Antarctica">Antarctica</option>
+            <option className={style.selectOptions} value="North America">North America</option>
+            <option className={style.selectOptions} value="South America">South America</option>
           </select>
-          <select onChange={(event)=>handleFilterByActivities(event.target.value)}> 
+          <select className={style.selectButtons} onChange={(event)=>handleFilterByActivities(event.target.value)}> 
                     <option >Filter By Activity</option>
                     {nonRepeatedActivities?.map(activity => {
                         return(
@@ -65,7 +66,7 @@ const Filters = ({ handleFilter }) => {
                         })
                     }
                 </select>
-    
+                </div>
         </div>
     )
 };

@@ -1,13 +1,13 @@
 .container{
-    background-color: rgb(0, 0, 0);
-    margin-top: 12px;
-    margin-bottom: 12px;
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: 25px;
+    margin-bottom: 15px;
     
 }
 .input{
-    border: 1.5px solid rgba(0, 0, 0, 0.329);
+    border: 2px solid #2d99b4ec;
     box-shadow: 0 0 8px #2d99b4ec;
-    background-color: #08080836 ;
+    background-color: #08080800 ;
     border-radius: 30px;
     margin-left: 5px;
     color: white;
@@ -19,6 +19,8 @@
     margin-bottom: 5px;
     text-align: center;
     font-weight: bold;
+    margin-right: 15px;
+    transition: 1.5s, color .10s;
 }
 .input:hover{
     border: 2px solid #ffffff73;
@@ -30,7 +32,7 @@
     color: white;
   }
 .searchButton{
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid #2d99b4ec;
     box-shadow: 0 0 8px #2d99b4ec;
     border-radius: 30px;
     background-color: #08080836;
@@ -40,6 +42,7 @@
     width: 120px;
     font-size: 16px;
     font-weight: bold;
+    transition: 1.5s, color .10s;
 }
 .searchButton:hover{
     border: 2px solid #ffffff73;

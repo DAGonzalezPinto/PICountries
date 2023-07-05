@@ -1,9 +1,10 @@
-import Card from "../Card/Card.component.jsx"
+import Card from "../Card/Card.component.jsx";
+import style from "./Cards.module.css";
 
 const Cards = ({allCountries}) =>{
     const countries = allCountries;
     return (
-        <div>
+        <div className={style.cardsContainer}>
             {countries?.map(({id, name, flag, continent}) => 
             <Card 
             key={id}

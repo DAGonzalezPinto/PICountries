@@ -1,5 +1,5 @@
 .container {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     position: relative;
     display: flex;
     margin-top: -8px;
@@ -7,7 +7,9 @@
     margin-right: -8px;
     justify-content: center;
     border-radius: 5px;
+    box-shadow: 0 0 20px black;
 }
+
 
 .buttonContainer {
     margin-top: 10px;
@@ -16,28 +18,30 @@
 }
 
 .formButton {
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid #2d99b4ec;
     box-shadow: 0 0 8px #2d99b4ec;
     border-radius: 30px;
     background-color: #08080836;
     color: white;
     margin: 5px;
+    margin-top: 19px;
     height: 55px;
     width: 180px;
     font-size: 16px;
     font-weight: bold;
     position: relative;
     right: 40px;
+    transition: 1.5s, color .10s;
 }
 
 .formButton:hover {
     border: 2px solid #ffffff73;
     box-shadow: 0 0 10px #ffffff;
-    background-color: #2d99b446;
+    background-color: #2d99b434;
 }
 
 .imgContainer {
-    margin-top: 15px;
+    margin-top: 25px;
     position: relative;
     right: 460px;
     display: flex;

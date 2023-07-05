@@ -9,11 +9,11 @@ import style from "./Home.module.css";
 
 const Home = () => {
     const dispatch = useDispatch();
-    const allCountries = useSelector((state) => state.countries);
+    const allCountries = useSelector((state) => state.countries) ?? [];
     const [page, setPage] = useState(1);
     const [currentPage, setCurrentPage] = useState(1);
     const countriesPerPage = 10;
-    const maxPages = Math.ceil(allCountries ? allCountries.length / countriesPerPage : 1);
+    const maxPages = Math.ceil((allCountries && allCountries.length) / countriesPerPage) || 1;
   
     useEffect(() => {
       dispatch(getAllCountries());
@@ -23,14 +23,13 @@ const Home = () => {
       (currentPage - 1) * countriesPerPage,
       currentPage * countriesPerPage
     );
-  
     const handleFilter = () => {
       setPage(1);
       setCurrentPage(1);
     };
   
     return (
-      <div className={style.container}>
+      <div className={style.overlayHome}>
         <NavBar handleFilter={handleFilter}/>
         <Filters setPage={setPage} setCurrentPage={setCurrentPage} handleFilter={handleFilter} />
         <Paginado
@@ -40,7 +39,9 @@ const Home = () => {
           setCurrentPage={setCurrentPage}
           maxPages={maxPages}
         />
+        <div>
         <Cards allCountries={paginatedCountries} />
+        </div>
       </div>
     );
   };

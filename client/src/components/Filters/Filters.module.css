@@ -1,0 +1,32 @@
+.filtersContainer{
+    display: flex;
+    justify-content: center;
+    background-color: #2d99b402;
+    height: 35px;
+}
+.buttonsContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+.selectButtons{
+    margin-top: 3px;
+   border-radius: 300px;
+   margin-bottom: 3px;
+   text-align: center;
+   background-color: black;
+   color: white;
+   font-size: 15px;
+   font-weight: bold; 
+   display: flex;
+   border: 2px solid #2aa1beec;
+   font-family: 'Playfair Display', serif;
+   box-shadow: 0 0 3px #ffffff;;
+}
+.selectButtons:focus{
+    outline: none;
+}
+.selectOptions{
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+}

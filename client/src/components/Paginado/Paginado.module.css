@@ -1,8 +1,124 @@
-.hideButton{
+.paginadoContainer {
+    background-color: #2d99b402;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 1px;
+    height: 10px;
+}
+
+.hideButton {
     padding: 0.5rem;
     width: 1rem;
     height: 1rem;
     margin-right: 0.5rem;
-    display: flex;
     border-radius: 1rem;
+}
+
+.pagButtonsContainer {
+    margin-bottom: 5px;
+    margin-top: 25px;
+    position: relative;
+    height: 20px;
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.pagAButton {
+    border: 2px solid #2aa1beec;
+    box-shadow: 0 0 6px #2aa1beec;
+    border-radius: 30px;
+    height: 35px;
+    width: 35px;
+    background-color: black;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
+}
+
+.pagDButton {
+    border: 2px solid #2aa1beec;
+    box-shadow: 0 0 6px #2aa1beec;
+    border-radius: 30px;
+    height: 35px;
+    width: 35px;
+    background-color: black;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
+}
+
+.pagDButton:active {
+    transform: translatex(20px);
+    -webkit-transform: translatex(20px);
+    -moz-transform: translatex(20px);
+}
+
+.pagAButton:active {
+    transform: translatex(-20px);
+    -webkit-transform: translatex(-20px);
+    -moz-transform: translatex(-20px);
+}
+
+.pagInput {
+    border: 2px solid #2aa1beec;
+    box-shadow: 0 0 6px #2aa1beec;
+    border-radius: 30px;
+    height: 30px;
+    width: 30px;
+    background-color: black;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    transition: .5s, color .10s;
+}
+
+.currentPag {
+    border: 2px solid #2aa1beec;
+    box-shadow: 0 0 6px #2aa1beec;
+    border-radius: 30px;
+    height: 35px;
+    width: 50px;
+    background-color: black;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    transition: .5s, color .10s;
+}
+
+.currentPag:hover {
+    border: 2px solid #ffffffec;
+    box-shadow: 0 0 6px #ffffffec;
+    background-color: #2aa0be67;
+}
+
+.pagInput:hover {
+    border: 2px solid #ffffffec;
+    box-shadow: 0 0 6px #ffffffec;
+    background-color: #2aa0be67;
+}
+
+.pagAButton:hover {
+    border: 2px solid #ffffffec;
+    box-shadow: 0 0 6px #ffffffec;
+    background-color: #2aa0be67;
+}
+.pagDButton:hover {
+    border: 2px solid #ffffffec;
+    box-shadow: 0 0 6px #ffffffec;
+    background-color: #2aa0be67;
+}
+
+.pagInput:focus {
+    outline: none;
 }

@@ -14,7 +14,8 @@ export const getAllCountries = () => {
                 subregion: country.subregion,
                 area: country.area,
                 population: country.population,
-                activities: country.Activities
+                activities: country.Activities,
+                maps: country.maps
 
             }
         })

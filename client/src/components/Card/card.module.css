@@ -1,47 +1,74 @@
-.container{
-    border: 3px solid white;
-    background-color: pink;
-    transition: .5s, color .10s;
+.container {
+    font-family: 'Playfair Display', serif;
+    border: 3px solid #2aa1beec;
+    box-shadow: 0 0 80px #000000;
+    background-color: rgba(0, 0, 0, 0.89);
+    width: 250px;
+    height: 300px;
+    border-radius: 20px;
+    text-align: center;
+    margin-right: 30px;
+    margin-left: 60px;
+    margin-top: 60px;
+    text-decoration: none;
+    transition: 1s, color .10s;
     -webkit-transition: .5s, color .10s;
     -moz-transition: .5s, color .10s;
 }
-/* .container:hover {
-    transform: scale3d(1.2, 1.2, 0.3);
-    -webkit-transform: scale3d(1.1, 1.1, 0.3);
-    -moz-transform: scale3d(1.1, 1.1, 0.3);
-} */
-.container:hover{
-    box-shadow: 0 8px 8px 0 #000000,0 8px 8px 0 #000000;
-    transform: translate(0px,5px);
-    -webkit-transform: translate(0px,5px);
-    -moz-transform:translate(0px,5px);
+
+.countryName {
+    margin-top: 50px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: aliceblue;
+    text-shadow: 0 0 5px #000000;
+    font-family: 'Playfair Display', serif;
 }
 
-              
-/* .shake{
-    animation-name: shake;
-    -webkit-animation-name: shake;
-    -moz-animation-name: shake;
-animation-duration: 1s;
-    -webkit-animation-duration: 1s;
-    -moz-animation-duration: 1s;
-animation-iteration-count: infinite;
-    -webkit-animation-iteration-count: infinite;
-    -moz-animation-iteration-count: infinite;
-    }
-    
-@keyframes shake {
-    0%  {transform: translate(1px, 1px) rotate(0deg);}
-    10% {transform: translate(-1px, -2px) rotate(-1deg);}
-    20% {transform: translate(-3px, 0px) rotate(1deg);}
-    30% {transform: translate(3px, 2px) rotate(0deg);}
-    40% {transform: translate(1px, -1px) rotate(1deg);}
-    50% {transform: translate(-1px, 2px) rotate(-1deg);}
-    60% {transform: translate(-3px, 1px) rotate(0deg);}
-    70% {transform: translate(3px, 1px) rotate(-1deg);}
-    80% {transform: translate(-1px, -1px) rotate(1deg);}
-    90% {transform: translate(1px, 2px) rotate(0deg);}
-    100% {transform: translate(1px, -2px) rotate(-1deg);}
+.continentName {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: aliceblue;
+    text-shadow: 0 0 5px #000000;
+    margin-bottom: 1px;
+    font-family: 'Playfair Display', serif;
 }
-           */
-              
+
+.nameContainer {
+    width: 250px;
+    height: 60px;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.continentContainer {
+    margin-top: 30px;
+    width: 250px;
+    height: 60px;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.container:hover {
+    border: 3px solid #2aa1beec;
+    box-shadow: 0 0 10px #2d99b4;
+    transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+}
+
+.countryImg {
+    width: 120px;
+    height: 75px;
+    box-shadow: 0 0 10px #2d99b4c5;
+    border-radius: 5px;
+    margin-top: 1px;
+}
+
+.links {
+    text-decoration: none;
+}
